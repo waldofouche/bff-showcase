@@ -1,8 +1,8 @@
 ## Available Scripts
 
-To view the website, visit: https://bff-showcase.netlify.app
-username: admin@email.com
-password: AdminPassword
+To view the website, visit: https://bff-showcase.netlify.app<br />
+username: admin@email.com<br />
+password: AdminPassword<br />
 
 In the project directory, you can run:
 
