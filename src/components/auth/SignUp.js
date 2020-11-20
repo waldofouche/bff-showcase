@@ -63,8 +63,8 @@ export default function SignUp() {
   const submit = async (e) => {
     e.preventDefault();
     const newUser = { email, password, passwordCheck, displayName };
-    await Axios.post("https://bff-backend.herokuapp.com/users/register", newUser);
-    const loginRes = await Axios.post("https://bff-backend.herokuapp.com/users/login", {
+    await Axios.post("https://bff-api-showcase.herokuapp.com/users/register", newUser);
+    const loginRes = await Axios.post("https://bff-api-showcase.herokuapp.com/users/login", {
       email,
       password,
     });

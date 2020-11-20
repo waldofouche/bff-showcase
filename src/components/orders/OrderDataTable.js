@@ -41,7 +41,7 @@ class Order extends Component {
   componentDidMount() {
     let results = [];
     this.setState({ loading: true });
-    Axios.get("https://bff-backend.herokuapp.com/wooCommerce/orders")
+    Axios.get("https://bff-api-showcase.herokuapp.com/wooCommerce/orders")
       .then((response) => {
         console.log(response.data);
         response.data.forEach((order) => {

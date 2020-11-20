@@ -177,7 +177,7 @@ export default function Dashboard() {
       let token = localStorage.getItem("x-auth-token", "");
       let login;
 
-      Axios.post("https://bff-backend.herokuapp.com/users/tokenIsValid", null, {
+      Axios.post("https://bff-api-showcase.herokuapp.com/users/tokenIsValid", null, {
         headers: { "x-auth-token": token },
       })
         .then((res) => {
@@ -207,7 +207,7 @@ export default function Dashboard() {
         });
 
       if (login === true) {
-        const userRes = await Axios.get("https://bff-backend.herokuapp.com/users/", {
+        const userRes = await Axios.get("https://bff-api-showcase.herokuapp.com/users/", {
           headers: { "x-auth-token": token },
         });
         setUserData({

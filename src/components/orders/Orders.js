@@ -173,7 +173,7 @@ export default function Orders() {
       let token = localStorage.getItem("x-auth-token", "");
       let login;
 
-      Axios.post("https://bff-backend.herokuapp.com/users/tokenIsValid", null, {
+      Axios.post("https://bff-api-showcase.herokuapp.com/users/tokenIsValid", null, {
         headers: { "x-auth-token": token },
       })
         .then((res) => {

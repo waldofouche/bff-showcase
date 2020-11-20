@@ -70,7 +70,7 @@ export default function SignIn() {
       let token = localStorage.getItem("x-auth-token", "");
       let login;
 
-      await Axios.post("https://bff-backend.herokuapp.com/users/tokenIsValid", null, {
+      await Axios.post("https://bff-api-showcase.herokuapp.com/users/tokenIsValid", null, {
         headers: { "x-auth-token": token },
       })
         .then((res) => {
@@ -100,7 +100,7 @@ export default function SignIn() {
         });
 
       if (login === true) {
-        const userRes = await Axios.get("https://bff-backend.herokuapp.com/users/", {
+        const userRes = await Axios.get("https://bff-api-showcase.herokuapp.com/users/", {
           headers: { "x-auth-token": token },
         });
         setUserData({
@@ -118,7 +118,7 @@ export default function SignIn() {
     try {
       const loginUser = { email, password };
       const loginRes = await Axios.post(
-        "https://bff-backend.herokuapp.com/users/login",
+        "https://bff-api-showcase.herokuapp.com/users/login",
         loginUser
       );
       setUserData({

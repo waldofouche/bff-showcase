@@ -69,12 +69,12 @@ class Inventory extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-    Axios.get("https://bff-backend.herokuapp.com/products")
+    Axios.get("https://bff-api-showcase.herokuapp.com/products")
       .then((response) => {
         return response.data;
       })
       .then((products) => {
-        Axios.get("https://bff-backend.herokuapp.com/wooCommerce/products")
+        Axios.get("https://bff-api-showcase.herokuapp.com/wooCommerce/products")
           .then((response) => {
             let mergedProducts = products.map((product) => {
               return {
@@ -126,7 +126,7 @@ class Inventory extends Component {
     updatedProduct.wooID = Number(currentProduct.invWooID);
 
     Axios.post(
-      "https://bff-backend.herokuapp.com/products/update/" + currentProduct._id.toString(),
+      "https://bff-api-showcase.herokuapp.com/products/update/" + currentProduct._id.toString(),
       updatedProduct,
       { headers: { "Content-Type": "application/json" } }
     )
