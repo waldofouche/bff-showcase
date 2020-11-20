@@ -1,6 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
+
+To view the website, visit: https://bff-showcase.netlify.app
+username: admin@email.com
+password: AdminPassword
 
 In the project directory, you can run:
 
